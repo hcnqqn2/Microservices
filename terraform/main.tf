@@ -35,7 +35,6 @@ module "enable_google_apis" {
   # activate_apis is the set of base_apis and the APIs required by user-configured deployment options
   activate_apis = concat(local.base_apis, var.memorystore ? local.memorystore_apis : [])
 }
-
 # Create GKE cluster
 resource "google_container_cluster" "my_cluster" {
 
